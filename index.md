@@ -28,18 +28,17 @@ github:
 
 ```r
 data(galton)
-```
-
-```
-## Warning in data(galton): data set 'galton' not found
-```
-
-```r
 summary(galton)
 ```
 
 ```
-## Error in summary(galton): 找不到物件 'galton'
+##      child           parent     
+##  Min.   :61.70   Min.   :64.00  
+##  1st Qu.:66.20   1st Qu.:67.50  
+##  Median :68.20   Median :68.50  
+##  Mean   :68.09   Mean   :68.31  
+##  3rd Qu.:70.20   3rd Qu.:69.50  
+##  Max.   :73.70   Max.   :73.00
 ```
 
 --- .class #id 
@@ -52,9 +51,7 @@ summary(galton)
 hist(galton$child, xlab='child height', col='lightblue',main='Histogram')
 ```
 
-```
-## Error in hist(galton$child, xlab = "child height", col = "lightblue", : 找不到物件 'galton'
-```
+![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png)
 
 
 --- .class #id 
@@ -65,41 +62,12 @@ hist(galton$child, xlab='child height', col='lightblue',main='Histogram')
 
 ```r
       hist(galton$child, xlab='child height', col='lightblue',main='Histogram')
-```
-
-```
-## Error in hist(galton$child, xlab = "child height", col = "lightblue", : 找不到物件 'galton'
-```
-
-```r
       mu <- 70
       lines(c(mu, mu), c(0, 200),col="red",lwd=5)
-```
-
-```
-## Error in plot.xy(xy.coords(x, y), type = type, ...): plot.new has not been called yet
-```
-
-```r
       mse <- mean((galton$child - mu)^2)
-```
-
-```
-## Error in mean((galton$child - mu)^2): 找不到物件 'galton'
-```
-
-```r
       text(63, 150, paste("mu = ", mu))
-```
-
-```
-## Error in text.default(63, 150, paste("mu = ", mu)): plot.new has not been called yet
-```
-
-```r
       text(63, 140, paste("MSE = ", round(mse, 2)))
 ```
 
-```
-## Error in paste("MSE = ", round(mse, 2)): 找不到物件 'mse'
-```
+![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3-1.png)
+

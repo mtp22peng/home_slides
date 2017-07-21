@@ -64,15 +64,16 @@
   </hgroup>
   <article data-timings="">
     <pre><code class="r">data(galton)
+summary(galton)
 </code></pre>
 
-<pre><code>## Warning in data(galton): data set &#39;galton&#39; not found
-</code></pre>
-
-<pre><code class="r">summary(galton)
-</code></pre>
-
-<pre><code>## Error in summary(galton): 找不到物件 &#39;galton&#39;
+<pre><code>##      child           parent     
+##  Min.   :61.70   Min.   :64.00  
+##  1st Qu.:66.20   1st Qu.:67.50  
+##  Median :68.20   Median :68.50  
+##  Mean   :68.09   Mean   :68.31  
+##  3rd Qu.:70.20   3rd Qu.:69.50  
+##  Max.   :73.70   Max.   :73.00
 </code></pre>
 
   </article>
@@ -87,8 +88,7 @@
     <pre><code class="r">hist(galton$child, xlab=&#39;child height&#39;, col=&#39;lightblue&#39;,main=&#39;Histogram&#39;)
 </code></pre>
 
-<pre><code>## Error in hist(galton$child, xlab = &quot;child height&quot;, col = &quot;lightblue&quot;, : 找不到物件 &#39;galton&#39;
-</code></pre>
+<p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -100,35 +100,14 @@
   </hgroup>
   <article data-timings="">
     <pre><code class="r">      hist(galton$child, xlab=&#39;child height&#39;, col=&#39;lightblue&#39;,main=&#39;Histogram&#39;)
-</code></pre>
-
-<pre><code>## Error in hist(galton$child, xlab = &quot;child height&quot;, col = &quot;lightblue&quot;, : 找不到物件 &#39;galton&#39;
-</code></pre>
-
-<pre><code class="r">      mu &lt;- 70
+      mu &lt;- 70
       lines(c(mu, mu), c(0, 200),col=&quot;red&quot;,lwd=5)
+      mse &lt;- mean((galton$child - mu)^2)
+      text(63, 150, paste(&quot;mu = &quot;, mu))
+      text(63, 140, paste(&quot;MSE = &quot;, round(mse, 2)))
 </code></pre>
 
-<pre><code>## Error in plot.xy(xy.coords(x, y), type = type, ...): plot.new has not been called yet
-</code></pre>
-
-<pre><code class="r">      mse &lt;- mean((galton$child - mu)^2)
-</code></pre>
-
-<pre><code>## Error in mean((galton$child - mu)^2): 找不到物件 &#39;galton&#39;
-</code></pre>
-
-<pre><code class="r">      text(63, 150, paste(&quot;mu = &quot;, mu))
-</code></pre>
-
-<pre><code>## Error in text.default(63, 150, paste(&quot;mu = &quot;, mu)): plot.new has not been called yet
-</code></pre>
-
-<pre><code class="r">      text(63, 140, paste(&quot;MSE = &quot;, round(mse, 2)))
-</code></pre>
-
-<pre><code>## Error in paste(&quot;MSE = &quot;, round(mse, 2)): 找不到物件 &#39;mse&#39;
-</code></pre>
+<p><img src="assets/fig/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3"></p>
 
   </article>
   <!-- Presenter Notes -->
