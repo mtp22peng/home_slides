@@ -1,0 +1,8 @@
+name: Publish Document
+title:
+account: rpubs
+server: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/292899/9ac6fdff38a7442c8115cab6d201d5dd
+bundleId: https://api.rpubs.com/api/v1/document/292899/9ac6fdff38a7442c8115cab6d201d5dd
+url: http://rpubs.com/mtp22peng/292899
+when: 1500619604.81846
